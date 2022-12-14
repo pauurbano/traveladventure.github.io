@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+	<title>TRAVEL ADVENTURE - Contacte</title>
+	<link rel="shortcut icon" href="../TRAVELADVENTURE/imagenes/logo.png" type="image/ico">
+	<meta charset="utf-8"><meta name="description" content="En aquesta pàgina et proporcionem un formulari per contactar amb nosaltres i demanar més informació">
+    <meta name="author" content="Adrià Valdelvira i Pau Urbano">
+    <meta name="keywords" content="viatge, Catalunya, Tarragona, Barcelona, Girona, Lleida, travel, Espanya, mediterrani, contacte, informació">
+    <meta name="robots" content="index, follow, translate">
+	<style>
+	@font-face{
+    	font-family: montserrat;
+    	src: url(Montserrat-Medium.ttf);
+    }
+	.tot{
+    	background: white;
+    	font-family: montserrat;
+    }
+    .contingut{
+    	height: 1190px;
+    	width: 1200px;
+    	background: black;
+    	margin: auto;
+    	border-radius: 8px;
+    }
+    a{
+    	color: white;
+    	text-decoration: none;
+    }
+    .encapçalat{
+    	text-align: center;
+    }
+    .menu{
+    	margin-right: 60px;
+    	justify-content: space-around;
+    	display: flex; 
+    	font-weight: 600;
+    	color: white;
+    	font-family: montserrat;	
+    	margin-top: 40px;
+    }
+    .menu li{
+    	color:white;
+    	display: inline;
+    }
+    .menu a{
+    	color: white;
+    	text-decoration: none;
+    	padding: 20px;
+    }
+    .menu a:hover{
+    	border-radius: 8px;
+    	background: white;
+    	text-decoration: none;
+    	padding: 10px;
+    	color: black;
+    }
+    .contacte{
+    	margin-top: 320px;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	width: 800px;
+    	background: white;
+    	border-radius: 10px;
+    }
+    .contacte h1{
+    	font-family: trebuchet ms;
+    	color: black;
+    	text-align: center;
+    	padding: 0 0 20px 0;
+    	border-bottom: 1px solid silver;
+    }
+    .contacte form{
+    	font-family: trebuchet ms;
+    	color: #adadad;
+    	font-size: 16px;
+    	padding: 0 40px;
+    	box-sizing: border-box;
+    }
+    form .nom{
+    	position: relative;
+    	border-bottom: 2px solid #adadad;
+    	margin: 30px 0;
+    }
+    .nom input{
+    	width: 100%;
+    	padding: 0 5px;
+    	height: 40px;
+    	font-size: 16px;
+    	border: none;
+    	background: none;
+    	outline: none;
+    }
+    .nom label{
+    	position: absolute;
+    	top: 50%;
+    	left: 5px;
+    	color: #adadad;
+    	transform: translateY(-50%);
+    	font-size: 16px;
+    	pointer-events: none;
+    	transition: .5s;
+    }
+    .nom span::before{
+    	content: ' ';
+    	position: absolute;
+    	top: 40px;
+    	left: 0;
+    	width: 100%;
+    	height: 2px;
+    	background: #afafaf;
+    	transition: .5s;
+    }
+    .nom input:focus ~ label,
+    .nom input:focus ~ label{
+    	top: -5px;
+    	color: #afafaf;
+    }
+    .nom input:focus ~ span::before,
+    .nom input:focus ~ span::before{
+    	width: 100%;
+    }
+    form .correu{
+    	position: relative;
+    	border-bottom: 2px solid #adadad;
+    	margin: 30px 0;
+    }
+
+    .correu input{
+    	width: 100%;
+    	padding: 0 5px;
+    	height: 40px;
+    	font-size: 16px;
+    	border: none;
+    	background: none;
+    	outline: none;
+    }
+    .correu label{
+    	position: absolute;
+    	top: 50%;
+    	left: 5px;
+    	color: #adadad;
+    	transform: translateY(-50%);
+    	font-size: 16px;
+    	pointer-events: none;
+    	transition: .5s;
+    }
+    .correu span::before{
+    	content: ' ';
+    	position: absolute;
+    	top: 40px;
+    	left: 0;
+    	width: 100%;
+    	height: 2px;
+    	background: #afafaf;
+    	transition: .5s;
+    }
+    .correu input:focus ~ label,
+    .correu input:focus ~ label{
+    	top: -5px;
+    	color: #afafaf;
+    }
+    .correu input:focus ~ span::before,
+    .correu input:focus ~ span::before{
+    	width: 100%;
+    }
+
+    form .telefon{
+    	position: relative;
+    	border-bottom: 2px solid #adadad;
+    	margin: 30px 0;
+    }
+    .telefon input{
+    	width: 100%;
+    	padding: 0 5px;
+    	height: 40px;
+    	font-size: 16px;
+    	border: none;
+    	background: none;
+    	outline: none;
+    }
+    .telefon label{
+    	position: absolute;
+    	top: 50%;
+    	left: 5px;
+    	color: #adadad;
+    	transform: translateY(-50%);
+    	font-size: 16px;
+    	pointer-events: none;
+    	transition: .5s;
+    }
+    .telefon span::before{
+    	content: ' ';
+    	position: absolute;
+    	top: 40px;
+    	left: 0;
+    	width: 100%;
+    	height: 2px;
+    	background: #afafaf;
+    	transition: .5s;
+    }
+    .telefon input:focus ~ label,
+    .telefon input:focus ~ label{
+    	top: -5px;
+    	color: #afafaf;
+    }
+    .telefon input:focus ~ span::before,
+    .telefon input:focus ~ span::before{
+    	width: 100%;
+    }
+
+    form .nomusuari{
+    	position: relative;
+    	border-bottom: 2px solid #adadad;
+    	margin: 30px 0;
+    }
+    .nomusuari input{
+    	width: 100%;
+    	padding: 0 5px;
+    	height: 40px;
+    	font-size: 16px;
+    	border: none;
+    	background: none;
+    	outline: none;
+    }
+    .nomusuari label{
+    	position: absolute;
+    	top: 50%;
+    	left: 5px;
+    	color: #adadad;
+    	transform: translateY(-50%);
+    	font-size: 16px;
+    	pointer-events: none;
+    	transition: .5s;
+    }
+    .nomusuari span::before{
+    	content: ' ';
+    	position: absolute;
+    	top: 40px;
+    	left: 0;
+    	width: 100%;
+    	height: 2px;
+    	background: #afafaf;
+    	transition: .5s;
+    }
+    .nomusuari input:focus ~ label,
+    .nomusuari input:focus ~ label{
+    	top: -5px;
+    	color: #afafaf;
+    }
+    .nomusuari input:focus ~ span::before,
+    .nomusuari input:focus ~ span::before{
+    	width: 100%;
+    }
+
+    .info{
+    	margin-top: 1000px;
+    	width: 1200px;
+    	display: inline-block;
+    	text-align: center;
+    	font-family: montserrat;
+    	color: black;
+    	height: 150px;
+    	background: #3e3f40;
+    }
+    .info p{
+    	margin-top: 65px;
+    	vertical-align: middle;
+    	font-family: montserrat;
+    }
+    .info a{
+    	color: black;
+    	text-decoration: none;
+    	font-family: montserrat;
+    }
+    .boton{
+    	display: inline-block;
+  		padding: 15px 25px;
+  		font-size: 24px;
+ 		cursor: pointer;
+ 		text-align: center;
+ 		text-decoration: none;
+ 		outline: none;
+  		color: #fff;
+  		background-color: #4CAF50;
+  		border: none;
+  		border-radius: 15px;
+  		box-shadow: 0 9px #999;
+    }
+    .boton:hover {
+    	background-color: #3e8e41
+    }
+
+	.boton:active {
+ 		background-color: #3e8e41;
+  		box-shadow: 0 5px #666;
+  		transform: translateY(4px);
+	}
+	#linkpoli{
+		color: black;
+	}
+	</style>
+</head>
+<body class="tot">
+	<div class="contingut">
+		<div class="encapçalat">
+			<img src="../TRAVELADVENTURE/imagenes/logo.png" height="100" width="100" alt="logo">
+            <ul class="menu">
+              <li><a href="../TRAVELADVENTURE/index.html">INICI</a></li>
+              <li><a href="../TRAVELADVENTURE/barcelona.html">BARCELONA</a></li>
+              <li><a href="../TRAVELADVENTURE/tarragona.html">TARRAGONA</a></li>
+              <li><a href="../TRAVELADVENTURE/girona.html">GIRONA</a></li>
+              <li><a href="../TRAVELADVENTURE/lleida.html">LLEIDA</a></li>
+            </ul>
+        </div>
+       	<div class="contacte">
+       		<h1>Formulari de contacte</h1>
+       		<form method="post">
+       			<div class="nom">
+       				<input type="text" name="nom" required>
+       				<label>Nom</label>
+       			</div>
+       			<br>
+       			<div class="correu">
+       				<input type="email" id="email" name="email" autocomplete="off" required>
+       				<label>Correu electrònic</label>
+       			</div>
+       			<br>
+       			<div class="telefon">
+       				<input type="tel" name="phone" size="9" required>
+       				<label>Telèfon</label>
+       			</div>
+       			<br>
+       			<div class="xarxa">
+       				<label>Vols rebre la informació per alguna xarxa social?</label><br><br>
+					<input type="radio" name="federat" value="si">Si<br><br>
+					<input type="radio" name="federat" value="no" checked="checked">No<br>
+       			</div>
+       			<br>
+       			<br>
+       			<div class="xarxa">
+       				<label>Selecciona la xarxa</label><br><br>
+       				<input type="radio" name="social" value="Instagram">Instagram<br><br>
+       				<input type="radio" name="social" value="Facebook">Facebook<br><br>
+       				<input type="radio" name="social" value="Telegram">Telegram<br>
+       			</div>
+       			<div class="nomusuari">
+       				<input type="text" name="usuari">
+       				<label>Nom d'usuari</label>
+       			</div>
+       			<div class="politica">
+                    <input name="politicapriv" type="checkbox" required>Estic conforme amb la <a id="linkpoli" href="../TRAVELADVENTURE/politica.html" target="blank">política de privacitat</a> establerta per Travel Adventure
+                </div>
+                <br>
+       			<br>
+       			<div class="enviar">
+       				<input class="boton" type="submit" name="enviar" value="ENVIAR">
+       			</div>
+       			<br>
+       		</form>
+       	</div>
+       	<div class="info">
+        	<p>
+   				<a href="../TRAVELADVENTURE/politica.html" target="blank">Avís legal</a>
+  				|
+   				<a href="../TRAVELADVENTURE/politica.html" target="blank">Política de privacitat</a>
+   				|
+   				<a href="../TRAVELADVENTURE/politica.html" target="blank">Política de cookies</a>
+   				|
+    			TRAVEL ADVENTURE
+    		</p>
+    	</div>
+    </div>
+</body>
+</html>
